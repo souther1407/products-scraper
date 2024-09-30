@@ -1,11 +1,14 @@
 from requester.plainRequester import PlainRequester
 from bs4 import BeautifulSoup
+from config import config
+
+
+
 class FullHardScraper:
     def __init__(self):
         self.urlBase = "https://fullh4rd.com.ar"
-        self.routesCategories = ["/cat/185/discos-ssd/"]
+        self.routesCategories = config["fullhard"]
         self.requester = PlainRequester()
-
     def getProducts(self,html):
         soup = BeautifulSoup(html,"html.parser")
         products = []
@@ -18,16 +21,16 @@ class FullHardScraper:
 
     def scrape(self):
         currentPage = 1
-        thereIsProducts = True
         products = []
         for routeCategory in self.routesCategories:
-            while(thereIsProducts):
+            print(f"scraping en sección {routeCategory}")
+            currentPage = 1
+            while(True):
                 print(f"pag: {currentPage}")
                 html = self.requester.request(self.urlBase + routeCategory + str(currentPage))
                 currentPageProducts = self.getProducts(html)
                 if(len(currentPageProducts) == 0):
-                    thereIsProducts = False
-                    continue
+                   break
                 products += currentPageProducts
                 currentPage += 1
 
