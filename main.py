@@ -1,5 +1,6 @@
 import requests
-
+from bs4 import BeautifulSoup
+from scrapers.fullHard import FullHardScraper
 class App:
     def __init__(self):
         self.scrapers = []
@@ -8,5 +9,6 @@ class App:
 
 if __name__ == "__main__":
     app = App()
-    response = requests.get(url="https://google.com")
-    print(response.text)
+    fullHard=FullHardScraper()
+    fullHard.scrape()
+    
