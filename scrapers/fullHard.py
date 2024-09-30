@@ -15,10 +15,7 @@ class FullHardScraper:
             products.append(product)
         return products
 
-    def test(self):
-        html = self.requester.request(self.urlBase + self.routesCategories[0] + "1")
-        products = self.getProducts(html)
-        print(len(products))
+
     def scrape(self):
         currentPage = 1
         thereIsProducts = True
