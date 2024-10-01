@@ -1,3 +1,7 @@
 from config import env
+import requests
+
+
 class ApiService:
-    pass
+    def storeProducts(self, products):
+        requests.post(env.API_URL, json=products)
