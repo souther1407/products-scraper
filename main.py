@@ -1,22 +1,22 @@
 from scrapers.fullHard import FullHardScraper
+from scrapers.compraGamer import CompraGamerScraper
 from config import config
 from requester.seleniumRequester import SeleniumRequest
-from services.api import ApiService
 
 
 class App:
     def __init__(self):
-        self.scrapers = [FullHardScraper()]
-        self.apiService = ApiService()
+        self.scrapers = [FullHardScraper(), CompraGamerScraper(),]
 
     def start(self):
-        products = []
         for s in self.scrapers:
-            products += s.scrape()
-        self.apiService.storeProducts(products)
+            s.scrape()
 
 
 if __name__ == "__main__":
     app = App()
-    # fullHard = FullHardScraper()
-    # fullHard.scrape()
+    app.start()
+    # full_hard = FullHardScraper()
+    # full_hard.scrape()
+    # compra_gamer = CompraGamerScraper()
+    # compra_gamer.scrape()

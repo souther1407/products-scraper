@@ -7,7 +7,40 @@
         "/cat/19/discos-sata/"
       ],
       "ups": ["/cat/59/ups/"],
-      "monitores": ["/cat/62/monitores-led/"]
+      "monitores": ["/cat/62/monitores-led/"],
+      "procesadores": [
+        "/cat/192/amd-am4/",
+        "/cat/357/intel-1200/",
+        "/cat/384/intel-1700/",
+        "/cat/390/amd-am5/"
+      ],
+      "mothers": [
+        "/cat/198/mb-amd-am4/",
+        "/cat/358/mb-intel-1200/",
+        "/cat/385/mb-intel-1700/",
+        "/cat/389/mb-amd-am5/"
+      ],
+      "perifericos": [
+        "/cat/13/teclado-y-mouse/",
+        "/cat/140/teclados-gamer/",
+        "/cat/141/teclados-inalambricos/",
+        "/cat/24/teclado-usb/",
+        "/cat/73/mouse-inalambrico/",
+        "/cat/45/mouse-gamer/",
+        "/cat/26/mouse-optico-usb/",
+        "/cat/96/auriculares-con-microfono/",
+        "/cat/237/auriculares-inalambricos/",
+        "/cat/303/microfonos/"
+      ]
+    },
+    "compragamer": {
+      "almacenamiento": [
+        "/productos?cate=19",
+        "/productos?cate=81",
+        "/productos?cate=90"
+      ],
+      "ups": ["/productos?cate=31", "/productos?cate=111"],
+      "monitores": ["/productos?cate=5"]
     }
   }
 }

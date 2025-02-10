@@ -4,4 +4,5 @@ import requests
 
 class ApiService:
     def storeProducts(self, products):
-        requests.post(env.API_URL, json=products)
+        response = requests.post("http://localhost:8080/products", json={"products": products},
+                                 headers={"Content-type": "Application/json"})
